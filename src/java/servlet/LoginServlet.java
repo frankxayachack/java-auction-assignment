@@ -84,10 +84,9 @@ public class LoginServlet extends HttpServlet {
                 u = am.getUser(username, password);
                 HttpSession session = request.getSession();
                 session.setAttribute("user", u);
-                RequestDispatcher view = request.getRequestDispatcher("detail.jsp");
-                view.forward(request, response);
+                response.sendRedirect("DetailServlet");
             }else{
-                RequestDispatcher view = request.getRequestDispatcher("login.jsp");
+                RequestDispatcher view = request.getRequestDispatcher("login.html?failed");
                 view.forward(request, response);
             }
         }catch(Exception e){

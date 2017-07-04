@@ -8,17 +8,11 @@
         <filter-name>AuthenticationFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <servlet>
-        <servlet-name>detail</servlet-name>
-        <servlet-class>authen.DetailServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>detail</servlet-name>
-        <url-pattern>/detail</url-pattern>
-    </servlet-mapping>
+
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+
 </web-app>
